@@ -13,11 +13,9 @@ if len(sys.argv) == 1:
 
 # Parse the arguments
 args = parser.parse_args()
-args.seq = args.seq.upper()     # I found it more logical to change the sequence to upper case at this point, but let me know if you like it
+args.seq = args.seq.upper()     
 
 def calculate_nucleotide_percentage_DNA(sequence):
-    # Handling case sensitivity
-    sequence = sequence.upper()     # this line is redundant now, we could eliminate it I think
     
     # total length of the sequence
     total_length = len(sequence)
@@ -37,8 +35,6 @@ def calculate_nucleotide_percentage_DNA(sequence):
 
 
 def calculate_nucleotide_percentage_RNA (sequence):
-    # Handling case sensitivity
-    sequence = sequence.upper()     # this line is redundant now, we could eliminate it
 
     # total length of the sequence
     total_length = len(sequence)
